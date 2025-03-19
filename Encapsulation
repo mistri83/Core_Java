@@ -1,0 +1,60 @@
+package OOPS;
+
+public class Encapsulation_class {
+	private int id;
+	private String name , email;
+	public static void main(String[] args) {
+		
+		
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+}
+
+
+
+
+
+
+package OOPS;
+
+import java.util.Scanner;
+
+public class Call_Encapsulation {
+		
+		
+		
+	public static void main(String[] args) {
+		Encapsulation_class d = new Encapsulation_class();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your id :");
+		int id = sc.nextInt();
+		System.out.println("Enter your name :");
+		String name =sc.next();
+		System.out.println("Enter your email :");
+		String email = sc.next();
+	d.setEmail(email);
+	d.setId(id);
+	d.setName(name);
+	
+	System.out.println(d.getId() + " "+ d.getName()+ " " + d.getEmail());
+	}
+
+}
