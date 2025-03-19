@@ -1,0 +1,104 @@
+package OOPS;
+
+//class parent{
+//	int id;
+//	String name;
+//	public parent( int id, String name) {
+//	this.id=id;
+//	this.name=name;
+//	}
+//}
+//class Child extends parent{
+//	public Child() {
+//		super(1,"abc");
+//		System.out.println(id + " " +name);
+//	
+//	}
+//}
+
+
+
+
+//class parent{
+//	void test() {
+//		System.out.println("This is default method");
+//	}
+//}
+//class child extends parent{
+//	void test() {
+//		super.test();
+//		System.out.println("Child class method");
+//	}
+//}
+
+
+
+//class parent{
+//	void test(int i) {
+//		System.out.println("This is paremeterized method   " +i);
+//	}
+//}
+//class child extends parent{
+//	void test(int i ) {
+//		super.test(10);
+//		System.out.println(i);
+//	}
+//}
+public class Inheritance_creation {
+
+	public static void main(String[] args) {
+		
+		
+//		child c = new child();
+//		c.test(20);
+		
+//		child c = new child();
+//		c.test();
+		
+		
+		
+//		Child c = new Child();
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+
+
+
+package OOPS;
+class Parent{
+	public Parent() {
+	System.out.println("This is parent constructor");
+	}
+}
+class child1 extends Parent{
+	public child1() {
+//		super(); used just in case of parameterized
+	System.out.println("This is child1 constructor");
+	}
+}
+class child2 extends child1{
+	public child2() {
+	super();
+	System.out.println("This is child2 constructor");
+	}
+}
+class child3 extends child2{
+	public child3() {
+	super();
+	System.out.println("This is child3 constructor");
+	}
+	
+}
+public class Multilevel_inheritance {
+
+	public static void main(String[] args) {
+		child3 c = new child3();
+		
+
+	}
+
+}
