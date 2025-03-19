@@ -1,0 +1,44 @@
+package OOPS;
+
+abstract class Abstraction_class {
+
+	abstract void demo();
+	abstract void demo1();
+	abstract void demo2();
+
+}
+
+
+package OOPS;
+
+public class Call_Abstractoin  extends Abstraction_class{
+
+	public static void main(String[] args) {
+		
+		Call_Abstractoin s = new Call_Abstractoin();
+		s.demo();
+		s.demo1();
+		s.demo2();
+	}
+
+	@Override
+	void demo() {
+		System.out.println("This is demo method");
+		
+	}
+
+	@Override
+	void demo1() {
+		System.out.println("This is demo1 method");
+		
+	}
+	
+	void demo2() {
+		System.out.println("This is demo2 method");
+	}
+
+}
+
+
+
+
