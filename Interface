@@ -1,0 +1,109 @@
+package OOPS;
+
+public interface Data_interface {
+	
+	void demo();
+	void demo1();
+}
+
+interface Data1_interface{
+	
+	void demo2();
+	void demo3();
+	}
+
+
+
+package OOPS;
+
+public class Call_Interface implements Data_interface, Data1_interface {
+	
+	public void demo() {
+		System.out.println("This is demo method");
+	}
+	
+	public void demo1() {
+		System.out.println("This is demo1 method");
+	}
+	
+	public void demo2() {
+		System.out.println("This is demo2 method");
+	}
+	
+	public void demo3() {
+		System.out.println("This is demo3 method");
+	}
+
+	public static void main(String[] args) {
+	 Call_Interface ci = new Call_Interface();
+	 ci.demo();
+	 ci.demo1();
+	 ci.demo2();
+	 ci.demo3();
+
+	}
+
+}
+
+
+
+
+
+
+
+package OOPS;
+
+public interface Student_data {
+	
+	void add();
+	void show();
+
+}
+
+
+
+
+
+package OOPS;
+
+import java.util.Scanner;
+
+public class Call_Student  implements Student_data{
+	int a;
+	int id;
+	String name;
+	Scanner sc = new Scanner(System.in);
+	
+	
+		public void add() {
+		
+		System.out.println("Enter number 1 to add data and number 2 to show data ");
+		a = sc.nextInt();
+		if(a==1) {
+			System.out.println("Enter Student id and name : ");
+			id = sc.nextInt();
+			name = sc.next();
+		}else {
+			System.out.println("Enter data first");
+		}
+		
+	}
+	
+	public void show() {
+		System.out.println("Enter number 1 to add data and number 2 to show data");
+		a = sc.nextInt();
+		if(a==2) {
+		
+		System.out.println(id+"  "+name);
+		}
+	}
+
+	public static void main(String[] args) {
+		Call_Student cs = new Call_Student();
+		cs.add();
+		cs.show();
+		
+	}
+	
+
+}
