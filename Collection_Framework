@@ -1,0 +1,103 @@
+package Collection_framework;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+class Array_test{
+	int id;
+	String name, address;
+	public Array_test(int id, String name, String address) {
+		this.id=id;
+		this.name=name;
+		this.address=address;
+		}
+}
+public class Arraylist {
+
+	public static void main(String[] args) {
+		
+		Array_test a = new Array_test(1, "abc", "cba");
+		Array_test a1 = new Array_test(2, "def", "fed");
+		Array_test a2 = new Array_test(3, "ghi", "ihg");
+		ArrayList<Array_test> al = new ArrayList<Array_test>();
+		al.add(a);
+		al.add(a1);
+		al.add(a2);
+		
+		Iterator<Array_test> i = al.iterator();
+		while(i.hasNext()) {
+			Array_test ar = i.next();
+			System.out.println(ar.id + " " + ar.name + " " + ar.address);
+		}
+		
+		
+
+	}
+
+}
+
+
+
+package Collection_framework;
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+class Hash_set{
+	int id;
+	String name;
+	
+	public Hash_set(int id, String name) {
+		
+		this.id=id;
+		this.name=name;
+		
+	}
+}
+public class Hashset {
+
+	public static void main(String[] args) {
+		Hash_set hs = new Hash_set(1, "abc");
+		Hash_set hs1 = new Hash_set(2, "def");
+		Hash_set hs2 = new Hash_set(3, "ghi");
+		
+		HashSet<Hash_set> b =new HashSet<Hash_set>();
+		b.add(hs);
+		b.add(hs1);
+		b.add(hs2);
+		
+		Iterator<Hash_set> it = b.iterator();
+		while(it.hasNext()) {
+			Hash_set ht = it.next();
+			System.out.println(ht.id+ " "+ ht.name+ " ");
+		}
+	}
+
+}
+// Same syntax for Tree set
+// In Tree Set you'll get output in ascending order
+
+
+
+package Collection_framework;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Hashmap {
+
+	public static void main(String[] args) {
+		HashMap<Integer, String> hm = new HashMap<Integer, String>();
+		hm.put(1, "abc");
+		hm.put(2, "def");
+		hm.put(3, "ghi");
+		
+		for(Map.Entry<Integer, String> m:hm.entrySet()) {
+			System.out.println(m.getKey() + " " + m.getValue());
+		}
+
+	}
+
+}
+//Same syntax for Tree map 
+// In Tree map you'll get output in ascending order
