@@ -1,0 +1,288 @@
+package Collection_framework;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+
+class Student implements Comparable<Student>{
+	int id;
+	String name;
+	public Student(int id, String name) {
+		this.id=id;
+		this.name=name;
+	}
+	@Override
+	public int compareTo(Student o) {
+		if(o.id==id) {
+			return 0;
+		}else if (o.id<id) {
+			return 1;
+		}else {
+			return -1;	
+		}
+		
+	}
+}
+public class Comparable_Interface {
+
+	public static void main(String[] args) {
+		
+		Student st = new Student(1, "abc");
+		Student st1 = new Student(2, "def");
+		Student st2= new Student(3, "ghi");
+		Student st3 = new Student(4, "jkl");
+		ArrayList<Student> aq = new ArrayList<Student>();
+		aq.add(st);
+		aq.add(st1);
+		aq.add(st2);
+		aq.add(st3);
+		
+		Collections.sort(aq);
+		
+		Iterator<Student> r =  aq.iterator();
+		while(r.hasNext()) {
+			Student s = r.next();
+			System.out.println(s.id + "  " + s.name);
+		}
+	}
+
+}
+
+
+
+
+package Collection_framework;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+
+class Employee implements Comparable<Employee>{
+	int id;
+	String name;
+	public Employee(int id, String name) {
+		this.id=id;
+		this.name=name;
+		
+	}
+	@Override
+	public int compareTo(Employee o) {
+		
+		return name.compareTo(o.name);
+	}
+}
+public class Comparable_String {
+
+	public static void main(String[] args) {
+		Employee er = new Employee(1, "c");
+		Employee er1 = new Employee(2, "b");
+		Employee er2 = new Employee(3, "a");
+		ArrayList<Employee> s = new ArrayList<Employee>();
+		s.add(er);
+		s.add(er1);
+		s.add(er2);
+		
+		Collections.sort(s);
+		
+		Iterator<Employee> t = s.iterator();
+		while(t.hasNext()) {
+			Employee d = t.next();
+			System.out.println(d.id + "  " + d.name);
+		}
+	}
+
+}
+
+
+
+
+
+
+//package Collection_framework;
+//
+//import java.util.ArrayList;
+//import java.util.Collections;
+//import java.util.Comparator;
+//import java.util.Iterator;
+//
+//class Admin{
+//	int id;
+//	String name;
+//	public Admin(int id, String name) {
+//		this.id=id;
+//		this.name=name;
+//	}
+//}
+//class Idcomp implements Comparator{
+//
+//	@Override
+//	public int compare(Object o1, Object o2) {
+//		Admin a = (Admin)o1;
+//		Admin a1 = (Admin)o2;
+//		if(a.id==a1.id) {
+//			return 0;
+//		}else if(a.id>a1.id) {
+//			return 1;
+//		}else {
+//			return -1;
+//		}
+//	}
+//	
+//}
+//
+//class namecomp implements Comparator{
+//
+//	@Override
+//	public int compare(Object o1, Object o2) {
+//		Admin b = (Admin) o1;
+//		Admin b1 = (Admin) o2;
+//		return b.name.compareTo(b1.name);
+//	}
+//	
+//}
+//public class Comparator_Interface {
+//
+//	public static void main(String[] args) {
+//		Admin c = new Admin(2, "abc");
+//		Admin c1 = new Admin(3, "def");
+//		Admin c2 = new Admin(1, "ghi");
+//		
+//		ArrayList<Admin> d = new ArrayList<Admin>();
+//		d.add(c);
+//		d.add(c1);
+//		d.add(c2);
+//		
+//		Collections.sort(d, new Idcomp());
+//		Iterator<Admin> e = d.iterator();
+//		while (e.hasNext()) {
+//			Admin f = e.next();
+//			System.out.println(f.id + " "+ f.name);
+//			
+//			Collections.sort(d, new namecomp());
+//Iterator<Admin> g= d.iterator();
+//while(g.hasNext()) {
+//	Admin f1 = g.next();
+//	System.out.println(f1.id + " " +f1.name);
+//}
+//		}
+//
+//	}
+//
+//}
+
+
+
+
+package Collection_framework;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+
+class reverse implements Comparable<reverse>{
+	int id;
+	String name;
+	public reverse(int id, String name) {
+		this.id=id;
+		this.name= name;
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	@Override
+	public int compareTo(reverse o) {
+		if(o.id==id) {
+			return 0;
+		}else if (o.id>id) {
+			return 1;
+		}else {
+			return -1;	
+		}
+	}
+}
+public class Comparable_reverse {
+	
+	public static void main(String[] args) {
+		reverse rs = new reverse(2, "abc");
+		reverse rs1 = new reverse(3, "def");
+		reverse rs2 = new reverse(1, "ghi");
+		
+		ArrayList<reverse> re = new ArrayList<reverse>();
+		re.add(rs);
+		re.add(rs1);
+		re.add(rs2);
+		
+		Collections.sort(re);
+		
+		Iterator<reverse> rv = re.iterator();
+		while(rv.hasNext()) {
+			reverse er = rv.next();
+			System.out.println(er.id + " "+ er.name);
+		}
+	}
+
+}
+
+
+
+
+package Collection_framework;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+
+class admin{
+	String car_name;
+	String car_model;
+	int manufacturing_year;
+	
+	public admin(String car_name, String car_model, int manufacturing_year ) {
+		this.car_name=car_name;
+		this.car_model=car_model;
+		this.manufacturing_year = manufacturing_year;
+		// TODO Auto-generated constructor stub
+	}
+}
+
+class car implements Comparator{
+
+	@Override
+	public int compare(Object o1, Object o2) {
+		admin a = (admin) o1;
+		admin a1 = (admin) o2;
+		if(a.manufacturing_year==a1.manufacturing_year) {
+			return 0;
+		}else if(a.manufacturing_year>a1.manufacturing_year) {
+			return 1;
+		}else {
+			return -1;
+		}
+	}
+
+	
+}
+public class Company {
+
+	public static void main(String[] args) {
+		admin b = new admin("Skoda", "kushaq", 2021);
+		admin b1 = new admin("Skoda", "kodiaq", 2020);
+		admin b2 = new admin("Skoda", "kyla", 2023);
+		admin b3 = new admin("Skoda", "slavia", 2022);
+		
+		
+		ArrayList<admin> c = new ArrayList<admin>();
+		c.add(b);
+		c.add(b1);
+		c.add(b2);
+		c.add(b3);
+		Collections.sort(c, new car());
+		Iterator<admin> d = c.iterator();
+		while(d.hasNext()) {
+			admin d1 = d.next();
+			System.out.println(d1.car_name + " "+d1.car_model + " "+ d1.manufacturing_year); 
+		}
+	}
+
+}
